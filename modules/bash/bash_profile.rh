@@ -1,0 +1,33 @@
+# .bashrc
+source ~/project/pconfig/modules/bash/git-prompt.sh
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# User specific aliases and functions
+# .bashrc
+
+# .bashrc
+PS1="\[\033[0;34m\][$(date +%H:%M)]"
+PS1="$PS1 \[\e[0m\]\[\e[36m\]\u\[\e[0m\]"
+PS1="$PS1@"
+if [ "x$YROOT_NAME" != "x" ]; then
+  # Yroot Indicator
+  PS1="$PS1\[\e[32;40m\]$YROOT_NAME\[\e[0m\]"
+  PS1="$PS1@"
+fi
+
+PS1="$PS1\[\e[34;1m\]\h\[\e[0m\]"
+
+PS1="$PS1 \W"
+#GIT_BRANCH=`git status | grep "On branch" | awk '{print $4}'`
+PS1="${RESET}$PS1\[\e[35m\]\$(__git_ps1)\e[0m"
+
+PS1="$PS1 \\$ "
+
+#unset GIT_BRANCH
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+fi
