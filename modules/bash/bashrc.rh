@@ -21,7 +21,7 @@ PS1="$PS1\[\e[34;1m\]\h\[\e[0m\]"
 
 PS1="$PS1 \W"
 #GIT_BRANCH=`git status | grep "On branch" | awk '{print $4}'`
-PS1="${RESET}$PS1\[\e[35m\]\$(__git_ps1)\e[0m"
+PS1="${RESET}$PS1\[\e[35m\]\$(__git_ps1)\[\e[0m\]"
 
 PS1="$PS1 \\$ "
 
