@@ -5,7 +5,8 @@ os_distr="rh"
 
 function detect_os()
 {
-    os_distr="rh"
+#    os_distr="rh"
+    echo "not implemented!"
 }
 
 function symlink_file()
@@ -47,7 +48,12 @@ function use_tmux()
 
 function use_bash() 
 {
-    symlink_file $PCONFIG_ROOT/modules/bash/bashrc.${os_distr} ~/.bashrc
+    if [ "$os_distr" == "mac" ]; then
+        symlink_file $PCONFIG_ROOT/modules/bash/bashrc.${os_distr} ~/.bash_profile
+    else 
+        symlink_file $PCONFIG_ROOT/modules/bash/bashrc.${os_distr} ~/.bashrc
+    fi
+    echo "use_bash done"
 }
 
 function use_screen() 
@@ -57,7 +63,8 @@ function use_screen()
 }
 
 
-command=$1
+os_distr=$1
+command=$2
 detect_os
 
 
