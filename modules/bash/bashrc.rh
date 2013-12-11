@@ -8,7 +8,7 @@ fi
 
 source ~/project/pconfig/modules/bash/git-prompt.sh
 # .bashrc
-PS1="\[\033[0;34m\][$(date +%H:%M)]"
+PS1="\[\033[0;34m\][\D{%R}]"
 PS1="$PS1 \[\e[0m\]\[\e[36m\]\u\[\e[0m\]"
 PS1="$PS1@"
 if [ "x$YROOT_NAME" != "x" ]; then
