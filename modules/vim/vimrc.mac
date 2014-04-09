@@ -1,3 +1,16 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+"git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+" let Vundle manage Vundle, required
+Plugin 'gmarik/vundle'
+Plugin 'editorconfig/editorconfig-vim'
+filetype plugin indent on     " required
+
+
 set encoding=utf-8
 set smartindent "next level indent
 set hlsearch
@@ -6,7 +19,7 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 set autoindent "same level indent
-
+"
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
 if has("autocmd")
@@ -24,22 +37,22 @@ if has("autocmd")
 endif
 
 set number
-
-"set ofu=syntaxcomplete#Complete
-
-"autocmd FileType python　set
-set omnifunc=pythoncomplete#Complete
-autocmd FileType python runtime! autoload/pythoncomplete.vim
-autocmd FileType python setlocal foldmethod=indent
-
-let g:miniBufExplMapWindowNavVim = 1 
-let g:miniBufExplMapWindowNavArrows = 1 
-let g:miniBufExplMapCTabSwitchBufs = 1 
-let g:miniBufExplModSelTarget = 1 
-
-"let g:SimpleJsIndenter_BriefMode = 1
-"let g:DisableAutoPHPFolding = 1
-autocmd FileType php,html,js set ai
+"
+""set ofu=syntaxcomplete#Complete
+"
+""autocmd FileType python　set
+"set omnifunc=pythoncomplete#Complete
+"autocmd FileType python runtime! autoload/pythoncomplete.vim
+"autocmd FileType python setlocal foldmethod=indent
+"
+"let g:miniBufExplMapWindowNavVim = 1 
+"let g:miniBufExplMapWindowNavArrows = 1 
+"let g:miniBufExplMapCTabSwitchBufs = 1 
+"let g:miniBufExplModSelTarget = 1 
+"
+""let g:SimpleJsIndenter_BriefMode = 1
+""let g:DisableAutoPHPFolding = 1
+"autocmd FileType php,html,js set ai
 au Filetype html,xml,xsl source ~/.vim/plugin/closetag.vim 
 
 filetype plugin on
