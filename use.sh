@@ -43,13 +43,19 @@ function use_vim()
 
 function use_tmux() 
 {
+    if [ "$os_distr" == "mac" ]; then
+        symlink_dir $PCONFIG_ROOT/local.mac $PCONFIG_ROOT/local
+    else
+        symlink_dir $PCONFIG_ROOT/local.rh $PCONFIG_ROOT/local
+    fi
     symlink_file $PCONFIG_ROOT/modules/tmux/tmux.conf.${os_distr} ~/.tmux.conf
 }
 
 function use_bash() 
 {
+    symlink_file $PCONFIG_ROOT/modules/bash/bash_profile ~/.bash_profile
     if [ "$os_distr" == "mac" ]; then
-        symlink_file $PCONFIG_ROOT/modules/bash/bashrc.${os_distr} ~/.bash_profile
+        symlink_file $PCONFIG_ROOT/modules/bash/bashrc.${os_distr} ~/.bashrc
     else 
         symlink_file $PCONFIG_ROOT/modules/bash/bashrc.${os_distr} ~/.bashrc
     fi
@@ -69,6 +75,8 @@ detect_os
 
 
 case $command in
+    local)
+        ;;
     tmux)
         use_tmux
         ;;

@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/lihch/project/hat/web/templates/public/..'
 let g:netrw_dirhist_2='/home/lihch/project/hat/web/templates/troubleshoot/..'
 let g:netrw_dirhist_3='/home/lihch/project/hat/web/static/images/..'
+let g:netrw_dirhist_4='/home/y/conf/yapache22/sites'
+let g:netrw_dirhist_5='/home/y/conf/yapache22/modules'
+let g:netrw_dirhist_6='/home/lihch/project/hat/web/templates/troubleshoot'
