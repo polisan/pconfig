@@ -1,4 +1,8 @@
+set encoding=utf-8
 set nocompatible              " be iMproved, required
+set backspace=2
+set number
+
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
@@ -14,6 +18,9 @@ Plugin 'gmarik/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'fholgado/minibufexpl.vim'
+Bundle 'pangloss/vim-javascript'
 "" plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
 "" Git plugin not hosted on GitHub
@@ -42,6 +49,9 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 set smartindent "next level indent
 set hlsearch
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set expandtab
 set autoindent "same level indent
 
@@ -62,3 +72,14 @@ if has("autocmd")
 endif
 
 set foldmethod=indent
+
+let g:miniBufExplMapWindowNavVim = 1 " 按下Ctrl+h/j/k/l，可以切换到当前窗口的上下左口
+let g:miniBufExplMapWindowNavArrows = 1 " 按下Ctrl+箭头，可以切换到当前窗口的上下左右窗口
+let g:miniBufExplMapCTabSwitchBufs = 1 " 启用以下两个功能：Ctrl+tab移到下一个buffer并在当前窗口打开；Ctrl+Shift+tab移到上一个buffer并在当前窗口打开；ubuntu好像不支持
+"let g:miniBufExplMapCTabSwitchWindows = 1 " 启用以下两个功能：Ctrl+tab移到下一个窗口；Ctrl+Shift+tab移到上一个窗口；ubuntu好像不支持
+let g:miniBufExplModSelTarget = 1    " 不要在不可编辑内容的窗口（如TagList窗口）中打开选中的buffer
+
+
+au VimEnter * if !argc() | NERDTree | endif
+au VimEnter * wincmd p
+au bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
