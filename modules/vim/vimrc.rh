@@ -20,7 +20,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'fholgado/minibufexpl.vim'
-Bundle 'pangloss/vim-javascript'
+Plugin 'pangloss/vim-javascript'
+Plugin 'groenewege/vim-less'
 "" plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
 "" Git plugin not hosted on GitHub
