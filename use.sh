@@ -37,7 +37,7 @@ function symlink_dir()
 
 function use_vim() 
 {
-    symlink_file $PCONFIG_ROOT/modules/vim/vimrc.${os_distr} ~/.vimrc
+    symlink_file $PCONFIG_ROOT/modules/vim/vimrc ~/.vimrc
     symlink_dir $PCONFIG_ROOT/modules/vim/vim_files ~/.vim
 }
 
