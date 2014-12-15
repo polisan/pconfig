@@ -1,4 +1,5 @@
 #setw -g utf8 on
+set-window-option -g utf8 on
 #set -g status-utf8 on
 # use C-z, since it's on the home row and easier to hit than C-b
 set-option -g prefix C-z
