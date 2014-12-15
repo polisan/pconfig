@@ -19,7 +19,10 @@ Plugin 'gmarik/Vundle.vim'
 " plugin on GitHub repo
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'fholgado/minibufexpl'
+Plugin 'fholgado/minibufexpl.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'groenewege/vim-less'
+Plugin 'motus/pig.vim'
 "" plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
 "" Git plugin not hosted on GitHub
@@ -79,6 +82,11 @@ let g:miniBufExplMapCTabSwitchBufs = 1 " 启用以下两个功能：Ctrl+tab移�
 let g:miniBufExplModSelTarget = 1    " 不要在不可编辑内容的窗口（如TagList窗口）中打开选中的buffer
 
 
-au VimEnter *  NERDTree
+au VimEnter * if !argc() | NERDTree | endif
 au VimEnter * wincmd p
 au bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+set ttyfast
+set ttyscroll=3
+set lazyredraw
+"set synmaxcol=128
