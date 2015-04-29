@@ -1,5 +1,14 @@
 #enables colorin the terminal bash shell export
 
+#stty pass8
+#bind 'set convert-meta off'
+#bind 'set meta-flag on'
+#bind 'set output-meta on'
+#alias ls="ls -wG"
+
+export LANG="zh_CN.UTF-8"
+export LC_ALL="zh_CN.UTF-8"
+
 export CLICOLOR=1
 
 #sets up thecolor scheme for list export
