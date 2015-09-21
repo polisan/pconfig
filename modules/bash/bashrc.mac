@@ -41,4 +41,3 @@ PS1="$PS1 \\$ "
 #enables colorfor iTerm
 
 
-export PATH=~/Projects/bin/:$PATH

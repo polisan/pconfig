@@ -23,6 +23,9 @@ Plugin 'fholgado/minibufexpl.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'groenewege/vim-less'
 Plugin 'motus/pig.vim'
+Plugin 'fatih/vim-go'
+
+let g:go_fmt_autosave = 0
 "" plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
 "" Git plugin not hosted on GitHub
