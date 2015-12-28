@@ -24,7 +24,11 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'groenewege/vim-less'
 Plugin 'motus/pig.vim'
 Plugin 'fatih/vim-go'
-
+Plugin 'StanAngeloff/php.vim'
+"Plugin 'Valloric/YouCompleteMe'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'vim-IDE/vim-closetag'
+Plugin 'Valloric/MatchTagAlways'
 let g:go_fmt_autosave = 0
 "" plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
@@ -78,11 +82,48 @@ endif
 
 set foldmethod=indent
 
-let g:miniBufExplMapWindowNavVim = 1 " 按下Ctrl+h/j/k/l，可以切换到当前窗口的上下左口
-let g:miniBufExplMapWindowNavArrows = 1 " 按下Ctrl+箭头，可以切换到当前窗口的上下左右窗口
-let g:miniBufExplMapCTabSwitchBufs = 1 " 启用以下两个功能：Ctrl+tab移到下一个buffer并在当前窗口打开；Ctrl+Shift+tab移到上一个buffer并在当前窗口打开；ubuntu好像不支持
-"let g:miniBufExplMapCTabSwitchWindows = 1 " 启用以下两个功能：Ctrl+tab移到下一个窗口；Ctrl+Shift+tab移到上一个窗口；ubuntu好像不支持
-let g:miniBufExplModSelTarget = 1    " 不要在不可编辑内容的窗口（如TagList窗口）中打开选中的buffer
+" miniBufferExplorer
+" If you like control + vim direction key to navigate
+" windows then perform the remapping
+"
+noremap <C-J>     <C-W>j
+noremap <C-K>     <C-W>k
+noremap <C-H>     <C-W>h
+noremap <C-L>     <C-W>l
+
+" If you like control + arrow key to navigate windows
+" then perform the remapping
+"
+noremap <C-Down>  <C-W>j
+noremap <C-Up>    <C-W>k
+noremap <C-Left>  <C-W>h
+noremap <C-Right> <C-W>l
+
+" If you like <C-TAB> and <C-S-TAB> to switch buffers
+" in the current window then perform the remapping
+"
+noremap <C-TAB>   :MBEbn<CR>
+noremap <C-S-TAB> :MBEbp<CR>
+"
+" Or, in MRU fashion
+"
+noremap <C-TAB>   :MBEbf<CR>
+noremap <C-S-TAB> :MBEbb<CR>
+
+"
+" If you like <C-TAB> and <C-S-TAB> to switch windows
+" then perform the remapping
+"
+noremap <C-TAB>   <C-W>w
+noremap <C-S-TAB> <C-W>W
+"let g:miniBufExplMapWindowNavVim = 1 " 按下Ctrl+h/j/k/l，可以切换到当前窗口的上下左口
+"let g:miniBufExplMapWindowNavArrows = 1 " 按下Ctrl+箭头，可以切换到当前窗口的上下左右窗口
+"let g:miniBufExplMapCTabSwitchBufs = 1 " 启用以下两个功能：Ctrl+tab移到下一个buffer并在当前窗口打开；Ctrl+Shift+tab移到上一个buffer并在当前窗口打开；ubuntu好像不支持
+""let g:miniBufExplMapCTabSwitchWindows = 1 " 启用以下两个功能：Ctrl+tab移到下一个窗口；Ctrl+Shift+tab移到上一个窗口；ubuntu好像不支持
+"let g:miniBufExplModSelTarget = 1    " 不要在不可编辑内容的窗口（如TagList窗口）中打开选中的buffer
+
+let g:miniBufExplForceSyntaxEnable = 1
+let g:miniBufExplorerMoreThanOne = 2
 
 
 au VimEnter * if !argc() | NERDTree | endif
@@ -93,3 +134,6 @@ set ttyfast
 set ttyscroll=3
 set lazyredraw
 "set synmaxcol=128
+autocmd Filetype html setlocal ts=2 sts=2 sw=2
+autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
