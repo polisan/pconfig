@@ -4,3 +4,4 @@
 .netrwhist
 modules/vim/vim_files/bundle/*
 var/
+local
