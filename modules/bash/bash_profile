@@ -7,6 +7,6 @@ fi
 
 # User specific environment and startup programs
 export GOPATH=$HOME/Projects/Go:/Users/hongchang/Projects/Others/engine:/Users/hongchang/Projects/Arpg/server/GoRoot
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
 export PATH=${GOPATH//://bin:}/bin:$HOME/Projects/bin/:$HOME/Projects/pconfig/local/bin:$HOME/local/bin:$HOME/bin:$JAVA_HOME/bin:$PATH
 export LD_LIBRARY_PATH="$HOME/Projects/pconfig/local/lib"

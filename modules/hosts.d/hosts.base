@@ -1,4 +1,4 @@
-﻿##
+##
 # Host Database
 #
 # localhost is used to configure the loopback interface
@@ -7,3 +7,4 @@
 127.0.0.1	localhost
 #255.255.255.255	broadcasthost
 ::1             localhost 
+

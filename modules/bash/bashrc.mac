@@ -29,6 +29,13 @@ if [ "x$YROOT_NAME" != "x" ]; then
   PS1="$PS1@"
 fi
 
+if [ "x$DOCKER_MACHINE_NAME" != "x" ]; then
+  # Yroot Indicator
+  PS1="$PS1\[\e[32;40m\]$DOCKER_MACHINE_NAME\[\e[0m\]"
+  PS1="$PS1@"
+fi
+
+
 PS1="$PS1\[\e[34;1m\]\h\[\e[0m\]"
 
 PS1="$PS1 \W"
