@@ -3,3 +3,4 @@
 .DS_Store
 .netrwhist
 modules/vim/vim_files/bundle/*
+var/

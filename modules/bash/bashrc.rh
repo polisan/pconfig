@@ -32,3 +32,7 @@ export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
 export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib"
 
 alias bower='bower --allow-root'
+
+export GOPATH=/var/bt/go
+export PATH=$PATH:$GOPATH/bin
+
