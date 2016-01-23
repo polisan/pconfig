@@ -53,11 +53,12 @@ function use_tmux()
 
 function use_bash() 
 {
-    symlink_file $PCONFIG_ROOT/modules/bash/bash_profile ~/.bash_profile
     if [ "$os_distr" == "mac" ]; then
         symlink_file $PCONFIG_ROOT/modules/bash/bashrc.${os_distr} ~/.bashrc
+        symlink_file $PCONFIG_ROOT/modules/bash/bash_profile.${os_distr} ~/.bash_profile
     else 
         symlink_file $PCONFIG_ROOT/modules/bash/bashrc.${os_distr} ~/.bashrc
+        symlink_file $PCONFIG_ROOT/modules/bash/bash_profile.${os_distr} ~/.bash_profile
     fi
     echo "use_bash done"
 }

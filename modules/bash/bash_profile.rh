@@ -1,0 +1,24 @@
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi
+
+
+alias ls='ls --color=auto'
+export TERM='xterm-256color'
+
+# User specific environment and startup programs
+# export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+#JAVA
+export JAVA_HOME=/home/grid/java/current/
+export JRE_HOME=$JAVA_HOME/jre
+export SCALA_HOME=/home/grid/scala/current
+
+export CLASSPATH=./:$JAVA_HOME/lib:$JAVA_HOME/jre/lib
+
+export MAVEN_HOME=/root/project/share/maven
+
+export PATH=$HOME/project/bin/:$HOME/project/pconfig/local/bin:$HOME/local/bin:$HOME/bin:$JAVA_HOME/bin:$MAVEN_HOME/bin:$SCALA_HOME/bin:$PATH
+export LD_LIBRARY_PATH="$HOME/project/pconfig/local/lib"

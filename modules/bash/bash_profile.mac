@@ -5,6 +5,10 @@ if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
 
+
+alias ls='ls --color=auto'
+export TERM='xterm-256color'
+
 # User specific environment and startup programs
 export GOPATH=$HOME/Projects/Go:/Users/hongchang/Projects/Others/engine:/Users/hongchang/Projects/Arpg/server/GoRoot
 export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
