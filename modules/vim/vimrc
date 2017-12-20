@@ -1,7 +1,5 @@
 set encoding=utf-8
 set nocompatible              " be iMproved, required
-set backspace=2
-set number
 
 filetype off                  " required
 
@@ -9,13 +7,13 @@ filetype off                  " required
 " git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/vundle
 "
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-"Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -28,10 +26,15 @@ Plugin 'groenewege/vim-less'
 Plugin 'motus/pig.vim'
 Plugin 'fatih/vim-go'
 Plugin 'StanAngeloff/php.vim'
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'bling/vim-airline'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-IDE/vim-closetag'
 Plugin 'Valloric/MatchTagAlways'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'wincent/command-t'
 let g:go_fmt_autosave = 0
 "" plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
@@ -47,6 +50,15 @@ let g:go_fmt_autosave = 0
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+
+set backspace=2
+set ruler
+set number
+set showcmd
+set incsearch
+set hlsearch
+
+
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -137,6 +149,9 @@ set ttyfast
 set ttyscroll=3
 set lazyredraw
 "set synmaxcol=128
-autocmd Filetype html setlocal ts=2 sts=2 sw=2
-autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
-autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+autocmd Filetype html setlocal ts=4 sts=4 sw=4
+autocmd Filetype ruby setlocal ts=4 sts=4 sw=4
+autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
+hi Visual ctermbg=White ctermfg=Black
+"set nofoldenable
+syntax on

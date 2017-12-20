@@ -11,5 +11,5 @@ sed -i -e "s///" $TEMP_FILE
 
 mv $TEMP_FILE /etc/hosts
 
-
+killall -HUP mDNSResponder
 
