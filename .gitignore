@@ -5,3 +5,4 @@
 modules/vim/vim_files/bundle/*
 var/
 local
+modules/bash/complete/hosts
